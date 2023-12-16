@@ -1,0 +1,111 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective:10px;
+}  
+
+.container{
+    position: relative;
+             height: 100%;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+
+            transform-style:preserve-3d;
+            z-index: -1;
+
+}
+
+.background, .foreground{
+    position: absolute;  
+     object-fit: cover ;
+     
+    z-index:-4 ;  /*for layering, backgrpund and foreground ko niche layer pe shift kr diya
+                    ADVENTURE 0 index pe tha*/
+
+}
+
+.foreground{
+    position:absolute;
+    top: 500px;
+
+    transform: translateZ(-10px) scale(2.5);
+}
+
+.background{
+    transform: translateZ(-20px) scale(3);
+  
+}
+  
+h1{
+    position:absolute;
+    top: 5rem;
+    left:15%;
+    font-size: 10rem;
+    letter-spacing: 4px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0 ,0, 0, 3);
+
+}
+.text{
+    padding: 40px;
+    font-size: large;
+}
+
+ section{
+    background-color: rgb(45,45,45 );
+    color: white;
+    padding: 20px;
+ }
+
+ .bg{
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;/*image fix rehti hain aur cheezein image k uppr scroll karti hain*/
+    height: 400px;
+    background-size: cover ;
+    background-position: center;
+ }
+
+.bg1{
+    background-image: url(https://image.shutterstock.com/image-photo/cyclist-riding-bike-down-rock-260nw-1714931941.jpg);
+
+ }
+
+.bg2{
+    background-image: url(https://media.istockphoto.com/id/143918363/photo/standing-tall.jpg?s=612x612&w=0&k=20&c=CmYEL5PCpEPRU8w1G3ppYPgBP9sUqApsC7Jtdenj3ek=);
+
+ }
+
+.bg3{
+    background-image: url(https://www.seawatersports.com/img/newimage/activies/slide/paragliding-in-manali-combo.jpg);
+
+ }
+
+ .desc{
+  position: absolute;
+  background-color: white;
+  padding: 0.5rem 2.5rem;
+  top: 50%;
+  left: 57%;
+  transform:translateX(-50%) translateX(-50%) ;
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 600;
+ }
+
+.secHeading{
+    position: relative;
+    left: 3%;
+
+     font-size: 4rem;
+ 
+}
+ 
